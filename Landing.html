@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ebook – Emagreça em 30 Dias</title>
+  <meta name="description" content="Emagreça até 5kg em 30 dias com cardápio pronto, receitas rápidas e treinos de 15 minutos em casa. Ebook prático, simples e acessível." />
+  <meta property="og:title" content="Ebook – Emagreça em 30 Dias" />
+  <meta property="og:description" content="Cardápio de 30 dias + receitas + treinos curtos. Comece hoje!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta name="theme-color" content="#14b8a6" />  <style>
+    :root{
+      --bg: #0b1020;
+      --card: #0f172a;
+      --muted: #8892b0;
+      --text: #e2e8f0;
+      --primary: #14b8a6; /* mude a cor principal aqui */
+      --accent: #f59e0b;
+      --danger: #ef4444;
+      --ring: rgba(20,184,166,.25);
+      --shadow: 0 10px 30px rgba(2,6,23,.35);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: radial-gradient(1200px 600px at 70% -10%, rgba(20,184,166,.18), transparent), var(--bg); color: var(--text); }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1120px; padding: 0 20px; margin: 0 auto; }
+    header { position: sticky; top: 0; backdrop-filter: saturate(120%) blur(10px); background: rgba(11,16,32,.7); border-bottom: 1px solid rgba(148,163,184,.12); z-index: 50; }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight: 700; letter-spacing:.2px; }
+    .logo { inline-size: 36px; block-size: 36px; display:grid; place-items:center; border-radius: 10px; background: linear-gradient(135deg, var(--primary), #22d3ee); box-shadow: var(--shadow); }
+
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding: 14px 18px; border-radius: 999px; background: var(--primary); color:#081018; font-weight: 700; letter-spacing:.2px; border: 1px solid rgba(255,255,255,.06); box-shadow: 0 6px 18px var(--ring); transition: transform .08s ease, box-shadow .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 30px var(--ring); }
+    .btn.outline { background: transparent; color: var(--text); border-color: rgba(148,163,184,.2); }
+
+    .hero { position: relative; isolation:isolate; padding: 64px 0 32px; }
+    .hero-grid { display:grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
+    @media (min-width: 900px) { .hero { padding: 92px 0 56px; } .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 40px; } }
+    h1 { font-size: clamp(28px, 4vw, 48px); line-height: 1.08; margin: 0 0 12px; }
+    .sub { color: var(--muted); font-size: clamp(16px, 2vw, 18px); margin: 0 0 22px; }
+    .badges { display:flex; flex-wrap:wrap; gap:8px; margin: 16px 0 22px; }
+    .badge { display:inline-flex; align-items:center; gap:6px; padding: 8px 12px; border-radius: 999px; background: rgba(20,184,166,.1); border: 1px solid rgba(20,184,166,.3); color:#a7f3d0; font-size: 13px; }
+
+    .card { background: linear-gradient(180deg, rgba(148,163,184,.06), transparent 30%), var(--card); border: 1px solid rgba(148,163,184,.12); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .hero-card { padding: 22px; display:grid; gap: 18px; }
+
+    .mock { aspect-ratio: 4/5; border-radius: 16px; background: linear-gradient(145deg, #0b132b 0%, #11193a 100%); border: 1px solid rgba(148,163,184,.16); display:grid; place-items:center; position:relative; overflow:hidden; }
+    .mock::after{ content:""; position:absolute; inset:0; background: radial-gradient(400px 180px at 60% -10%, rgba(255,255,255,.08), transparent), radial-gradient(200px 120px at 20% 100%, rgba(20,184,166,.18), transparent); pointer-events:none; }
+    .book { inline-size: 70%; aspect-ratio: 3/4; background: linear-gradient(160deg, #14b8a6, #22d3ee); border-radius: 8px; transform: rotate(-8deg); box-shadow: 0 18px 40px rgba(34,211,238,.25); border: 2px solid rgba(255,255,255,.5); display:grid; place-items:center; color:#042126; font-weight:800; text-align:center; padding:14px; }
+
+    .grid-3 { display:grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 760px) { .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 18px; } }
+    .feature { padding:18px; }
+    .feature h3{ margin: 0 0 8px; font-size: 18px; }
+    .feature p{ margin: 0; color: var(--muted); font-size: 15px; }
+
+    section { padding: 46px 0; }
+    section h2 { font-size: clamp(22px, 3vw, 32px); margin: 0 0 10px; }
+    .muted { color: var(--muted); }
+
+    .list { display:grid; gap: 10px; margin: 14px 0; }
+    .li { display:flex; gap: 10px; align-items:flex-start; }
+    .li i { inline-size: 22px; block-size:22px; background: rgba(20,184,166,.16); border: 1px solid rgba(20,184,166,.32); color:#99f6e4; display:grid; place-items:center; border-radius: 999px; font-style: normal; font-weight: 700; font-size: 12px; margin-top: 1px; }
+
+    .pricing { display:grid; grid-template-columns: 1fr; gap: 18px; align-items: start; }
+    @media (min-width: 880px) { .pricing { grid-template-columns: 1.2fr .8fr; } }
+    .price-card { padding: 22px; }
+
+    .striked { text-decoration: line-through; color: #94a3b8; }
+    .big { font-size: clamp(28px, 4.6vw, 42px); font-weight: 800; }
+    .timer { font-variant-numeric: tabular-nums; font-weight: 700; color: #fde68a; }
+
+    .testi { display:grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 760px) { .testi { grid-template-columns: repeat(3, 1fr); } }
+    .quote { padding: 16px; }
+
+    details { background: rgba(148,163,184,.06); border: 1px solid rgba(148,163,184,.16); border-radius: 12px; padding: 14px 16px; transition: background .2s ease; }
+    details[open] { background: rgba(148,163,184,.1); }
+    summary { cursor: pointer; font-weight: 600; }
+
+    footer { padding: 38px 0; color: var(--muted); border-top: 1px solid rgba(148,163,184,.12); }
+
+    .floating { position: fixed; right: 18px; bottom: 18px; z-index: 60; display:flex; flex-direction:column; gap:10px; }
+    .whatsapp { inline-size: 56px; block-size: 56px; border-radius:999px; display:grid; place-items:center; background:#22c55e; color:white; font-weight:800; box-shadow: var(--shadow); }
+
+    .section-hint { font-size:12px; color:#9ca3af; margin-top:6px; }
+    .tag { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border: 1px dashed rgba(148,163,184,.3); border-radius:999px; font-size:12px; color:#a5b4fc; }
+    .sep { height:1px; background: rgba(148,163,184,.12); margin: 14px 0; }
+
+    /* Responsividade de imagens e iframes */
+    img, svg { max-width: 100%; height: auto; }
+  </style></head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">⚡</div>
+        <span>Ebook Emagrecimento</span>
+      </div>
+      <nav style="display:flex; gap:10px; align-items:center;">
+        <a class="btn outline" href="#beneficios">Benefícios</a>
+        <a class="btn" href="#checkout">QUERO EMAGRECER</a>
+      </nav>
+    </div>
+  </header>  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badges">
+            <span class="badge">Novo • 2025</span>
+            <span class="badge">Plano prático de 30 dias</span>
+          </div>
+          <h1>Emagreça até 5kg em 30 dias com cardápio pronto, receitas rápidas e treinos de 15 minutos – <span style="color:var(--primary)">sem passar fome</span>.</h1>
+          <p class="sub">Método simples e acessível para pessoas ocupadas: alimentação inteligente, treino curto e checklist diário. Comece hoje e veja resultado já na primeira semana.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn" href="#checkout">Quero emagrecer agora</a>
+            <a class="btn outline" href="#conteudo">Ver o que tem no ebook</a>
+          </div>
+          <p class="section-hint">✔️ Garantia de 7 dias • ✔️ Download imediato em PDF</p>
+        </div>
+        <div class="card hero-card">
+          <div class="mock">
+            <div class="book">
+              <div>
+                <div style="font-size:14px; opacity:.8;">EBOOK</div>
+                <div style="font-size:26px; line-height:1.1;">30 Dias de
+                  Cardápio + Treinos</div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-3">
+            <div class="card feature">
+              <h3>Cardápio pronto</h3>
+              <p>Passo a passo de 30 dias com substituições fáceis.</p>
+            </div>
+            <div class="card feature">
+              <h3>Receitas rápidas</h3>
+              <p>Até 20 min, ingredientes simples e baratos.</p>
+            </div>
+            <div class="card feature">
+              <h3>Treinos em casa</h3>
+              <p>Sem equipamento, 10–15 minutos por dia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- BENEFÍCIOS -->
+<section id="beneficios">
+  <div class="container">
+    <h2>Resultados reais com um plano simples</h2>
+    <p class="muted">Você não precisa de academia cara nem de dietas malucas. Precisa de <strong>clareza</strong> e <strong>constância</strong>.</p>
+    <div class="list">
+      <div class="li"><i>✓</i><div>Cardápio completo de 30 dias, pensado para rotina corrida.</div></div>
+      <div class="li"><i>✓</i><div>Receitas que não exigem habilidades de chef.</div></div>
+      <div class="li"><i>✓</i><div>Checklists e planner para manter o foco.</div></div>
+      <div class="li"><i>✓</i><div>Suporte por WhatsApp (opcional) para tirar dúvidas.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- O CONTEÚDO -->
+<section id="conteudo">
+  <div class="container">
+    <h2>O que você vai receber</h2>
+    <div class="grid-3">
+      <div class="card feature">
+        <span class="tag">Capítulos 1–3</span>
+        <h3>Fundamentos sem enrolação</h3>
+        <p>Os 3 pilares do emagrecimento, lista de alimentos e guia prático para montar pratos.</p>
+      </div>
+      <div class="card feature">
+        <span class="tag">Capítulo 4</span>
+        <h3>Cardápio de 30 dias</h3>
+        <p>Café, almoço, jantar e lanches – com substituições para não enjoar.</p>
+      </div>
+      <div class="card feature">
+        <span class="tag">Cap. 5–8 + Bônus</span>
+        <h3>Receitas + Treinos + Planner</h3>
+        <p>15 receitas rápidas, treinos de 10–15 min, checklist e lista de compras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section>
+  <div class="container">
+    <h2>Histórias de quem já começou</h2>
+    <div class="testi">
+      <div class="card quote">“Perdi 3kg em 15 dias seguindo o cardápio. Nunca foi tão simples.” — <strong>Aline S.</strong></div>
+      <div class="card quote">“As receitas são gostosas e cabem no bolso. Minha família entrou junto!” — <strong>Marcos R.</strong></div>
+      <div class="card quote">“Treinos curtos e práticos, finalmente consegui manter a rotina.” — <strong>Denise P.</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- PREÇO / CHECKOUT -->
+<section id="checkout">
+  <div class="container pricing">
+    <div class="card price-card">
+      <h2>Oferta de Lançamento</h2>
+      <p class="muted">Baixe agora e comece hoje. Acesso imediato ao PDF.</p>
+      <div class="sep"></div>
+      <p><span class="striked">R$ 97,00</span></p>
+      <p class="big">R$ 29,90</p>
+      <p class="muted">ou 3x no cartão</p>
+      <div class="sep"></div>
+      <a class="btn" href="COLOQUE_AQUI_SEU_LINK_DE_CHECKOUT" target="_blank" rel="noopener">Comprar agora</a>
+      <p class="section-hint">Garantia incondicional de 7 dias</p>
+    </div>
+    <div class="card price-card">
+      <h3>O que você leva</h3>
+      <div class="list">
+        <div class="li"><i>✓</i><div>PDF do Ebook (40–60 páginas)</div></div>
+        <div class="li"><i>✓</i><div>Planner semanal + Checklist 30 dias</div></div>
+        <div class="li"><i>✓</i><div>Lista de compras econômica</div></div>
+        <div class="li"><i>✓</i><div>Atualizações futuras grátis</div></div>
+      </div>
+      <details>
+        <summary>Perguntas frequentes</summary>
+        <div class="list" style="margin-top:10px">
+          <div><strong>Como recebo?</strong><br><span class="muted">Após o pagamento, você recebe o link de download no e-mail.</span></div>
+          <div><strong>Serve para iniciantes?</strong><br><span class="muted">Sim, foi pensado para quem quer começar do zero.</span></div>
+          <div><strong>Precisa de academia?</strong><br><span class="muted">Não. Os treinos são rápidos e feitos em casa.</span></div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div class="container" style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content: space-between;">
+      <div>© <span id="year"></span> Seu Nome. Todos os direitos reservados.</div>
+      <div class="muted">Política de Privacidade • Termos de Uso</div>
+    </div>
+  </footer>  <!-- Floating Actions -->  <div class="floating">
+    <a class="whatsapp" href="https://wa.me/SEU_NUMERO_WHATSAPP?text=Quero%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20ebook" target="_blank" aria-label="WhatsApp">✆</a>
+  </div>  <script>
+    // ano do rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // scroll suave para âncoras internas
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if(id.length > 1) {
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // 🔧 DICAS DE PERSONALIZAÇÃO (remova ao publicar):
+    // 1) Troque COLOQUE_AQUI_SEU_LINK_DE_CHECKOUT pelo link do checkout (Kiwify/Hotmart).
+    // 2) Troque o número do WhatsApp em wa.me/SEU_NUMERO_WHATSAPP (formato 55DDDNÚMERO).
+    // 3) Edite textos, preço e cores (variável --primary no :root).
+  </script>  <!-- Espaço para Pixel/Analytics (opcional) -->  <!-- Cole aqui o código do seu Pixel do Facebook/TikTok ou Google Analytics. --></body>
+</html>
